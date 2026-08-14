@@ -6,8 +6,34 @@
 
   <title>Video Viral</title>
 
+  <!-- ==============================
+       FACEBOOK / OPEN GRAPH
+       ============================== -->
+
+  <meta property="og:title" content="Video Viral">
+  <meta property="og:description" content="Tonton video selengkapnya di sini">
+
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:image"
+    content="https://jpcdn.it/img/0de786bb992cce50099a1b2919d90ee7.jpg"
+  >
+
+  <meta
+    property="og:image:secure_url"
+    content="https://jpcdn.it/img/0de786bb992cce50099a1b2919d90ee7.jpg"
+  >
+
+  <meta property="og:image:type" content="image/jpeg">
+
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+
   <!-- POPUNDER -->
   <script src="https://pl29581027.effectivecpmnetwork.com/4d/cc/6c/4dcc6c0e5e64226e4cb432f2f8e2c09e.js"></script>
+
 
   <style>
     * {
@@ -45,6 +71,7 @@
       padding: 12px;
     }
   </style>
+
 </head>
 
 <body>
@@ -57,12 +84,14 @@
       playsinline
       preload="metadata"
     >
+
       <source
         src="https://cdn2.videy.co/UBX0ULqN1.mp4"
         type="video/mp4"
       >
 
       Browser kamu tidak mendukung video HTML5.
+
     </video>
 
     <div class="info">
@@ -70,6 +99,7 @@
     </div>
 
   </div>
+
 
   <script>
 
@@ -80,18 +110,13 @@
 
     let redirected = false;
 
-    /*
-     * Cek posisi video
-     */
+
     video.addEventListener("timeupdate", function () {
 
       if (redirected) {
         return;
       }
 
-      /*
-       * Redirect ketika video mencapai 15 detik
-       */
       if (video.currentTime >= 15) {
 
         redirected = true;
@@ -99,6 +124,7 @@
         video.pause();
 
         window.location.href = directLink;
+
       }
 
     });
